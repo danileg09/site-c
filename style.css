@@ -113,13 +113,14 @@
 
 .box-condicoes{
     width: 100%;
-    height: 400px;
+    height: max-content;
     background-color: rgb(84, 135, 146);
 }
 
 .condicoes-title{
     padding-top: 5%;
     text-align: center;
+    padding-bottom: 5%;
 }
 
 /* ------footer------ */
@@ -247,7 +248,11 @@ body {
     border-radius: 6px;
     outline: none;
     padding: 5px 10px;
-    color: #cccccc;
+    color: #fefefe;
+  }
+
+  .footer .footer-newsletter .campo::placeholder{
+    color: #fefefe;
   }
   .footer .footer-newsletter .campo:focus {
     
@@ -363,4 +368,32 @@ body {
     .footer .copyright .copy-text p {
       margin-bottom: 5px;
     }
+  }
+
+  /* -----calculadora------ */
+
+  .box-calculadora {
+    width: 50%;
+    background-color: white;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+  
+  .input-calc {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  #hide-modal{
+    display: none;
+  }
+
+  #enviarModal{
+    display: none;
   }
