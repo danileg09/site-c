@@ -373,7 +373,7 @@ body {
   /* -----calculadora------ */
 
   .box-calculadora {
-    width: 50%;
+    width: 80%;
     background-color: white;
     height: 100%;
     border-radius: 10px;
@@ -383,6 +383,11 @@ body {
     flex-direction: column;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    
+  }
+
+  #shadow{
+    box-shadow: 0px 0px 40px #000;
   }
   
   .input-calc {
@@ -397,3 +402,18 @@ body {
   #enviarModal{
     display: none;
   }
+  
+
+.radio-calc{
+  
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 5px #000;
+}
+
+.radio-calc2{
+  
+  border-radius: 10px;
+  padding: 30px 80px;
+  box-shadow: 0px 0px 5px #000;
+}

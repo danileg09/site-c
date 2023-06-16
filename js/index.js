@@ -18,7 +18,7 @@ function S1(){
     solDes1.style.display="block";
     solDes3.style.display="none";
     solDes4.style.display="none";
-    img.src = "./img/trabaio.jpg";
+    img.src = "./img/CAB-PNG.png";
 
 }
 
@@ -71,3 +71,18 @@ function selectCard(){
     }
 
 }
+
+function showmodal(){
+  document.getElementById("hide-modal").style.display = "block";
+  document.getElementById("enviarModal").style.display = "block";
+  document.getElementById("hide-modal2").style.display = "none";
+  document.getElementById("solicitar").style.display = "none";
+}
+
+function closemodal(){
+  document.getElementById("hide-modal").style.display = "none";
+  document.getElementById("enviarModal").style.display = "none";
+  document.getElementById("hide-modal2").style.display = "block";
+  document.getElementById("solicitar").style.display = "block";
+}
+

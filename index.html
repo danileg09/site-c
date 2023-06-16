@@ -18,18 +18,24 @@
 
 <body>
   <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg " style="background-color:  #F5F5F5; box-shadow: 0px 0px 40px #00000050;">
+    <div class="container" >
 
-      <a class="navbar-brand" href="#"> <img src="./img/logo.svg" alt="" style="width:100%;"></a>
+      
+      <img src="./img/logo1.png" alt="" style="width: min(290px, 75%);">
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <div class="space" style="padding-left: 18%;">
+      </div>
+
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item dropdown">
-            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link " href="#sobre-nos">
               Sobre nós
             </a>
             <!--  <ul class="dropdown-menu">
@@ -42,7 +48,7 @@
             </ul> -->
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link " href="#fale-conosco" >
               Fale conosco
             </a>
             <!-- <ul class="dropdown-menu">
@@ -55,7 +61,7 @@
             </ul> -->
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" href="#tipos-servico" >
               Abra Cnpj
             </a>
             <!--  <ul class="dropdown-menu">
@@ -69,7 +75,7 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link " href="#troque-contador" >
               Troque de Contador
             </a>
             <!--  <ul class="dropdown-menu">
@@ -91,6 +97,7 @@
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form> -->
       </div>
+
     </div>
   </nav>
   <!-- Fim navBar -->
@@ -99,7 +106,9 @@
   <section class="sec1">
     <div class="boxTexto-1">
       <div class="textApresentacao">
-        <h1>Da abertura do CNPJ até a gestão contábil, conte com a gente</h1>
+        <div class="container-text1">
+            <h1>Da abertura do CNPJ até a gestão contábil, conte com a gente</h1>
+        </div>
         <table class="table">
           <thead>
             <tr>
@@ -140,7 +149,12 @@
       </div>
       <div class="imagemTrabaio">
         <img src="./img/trabaio.jpg" class="" alt="..." style="width:95%; border-radius:10px;">
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
       </div>
+      
     </div>
 
   </section>
@@ -149,6 +163,11 @@
   <style>
     /* Estilos para dispositivos móveis */
     @media screen and (max-width: 767px) {
+
+      .container-text1{
+        max-width: 100%;
+        text-align: center;
+      }
 
       .sec1 {
         padding-top: 5%;
@@ -172,41 +191,67 @@
 
       }
 
+      .table{
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
 
     }
   </style>
 
   <!-- SECTION 2 -->
   <div class="box-solucoes">
-    <h1 class="text-solucoes">Soluções ideais para o seu negócio.</h1>
+    <h1 id="sobre-nos" class="text-solucoes">Soluções ideais para o seu negócio.</h1>
   </div>
 
   <section>
     <div class="box-solucoes2">
       <div class="container-textSolucoes">
 
-        <h4 onclick="S1()"><i class="fa-solid fa-dollar-sign"></i> Você escolhe a forma de atendimento <i
-            class="fa-solid fa-angle-down"></i></h4>
-        <p id="solucoes-description1">Na Contabilizei você tem a opção de escolher sua forma de atendimento preferida:
-          WhatsApp, chat, telefone, e-mail e pode até contar com um atendimento exclusivo, através de um assessor
-          especialista no seu segmento, escolhendo o plano Experts.</p><br>
-        <h4 onclick="S2()"><i class="fa-solid fa-file"></i> Você escolhe a forma de atendimento <i
-            class="fa-solid fa-angle-down"></i></h4>
-        <p id="solucoes-description2">Abra seu CNPJ com a gente e ganhe uma conta PJ digital totalmente integrada com a
-          sua contabilidade da sua empresa para você emitir notas fiscais e receber pelas suas vendas ou serviços
-          diretamente na sua conta!</p><br>
-        <h4 onclick="S3()"><i class="fa-solid fa-comment"></i> Você escolhe a forma de atendimento <i
-            class="fa-solid fa-angle-down"></i></h4>
-        <p id="solucoes-description3">Ajudamos você a organizar todas as suas obrigações contábeis e de cálculo de
-          impostos mensais.</p><br>
-        <h4 onclick="S4()"><i class="fa-solid fa-envelope"></i> Você escolhe a forma de atendimento <i
-            class="fa-solid fa-angle-down"></i></h4>
-        <p id="solucoes-description4">Com o Cobre.PJ, o link de pagamento da Contabilizei, você cobra parcelado no
-          cartão de crédito e recebe em
-          até 2 dias úteis.</p><br>
+        <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+        </div>
+
       </div>
       <div class="imagemTrabaio2">
-        <img id="img-solucoes" src="./img/trabaio.jpg" class="" alt="..." style="width:95%; border-radius:10px;">
+        <img id="img-solucoes" src="./img/CAB-PNG.png" class="" alt="..." style="width:95%; border-radius:10px;">
       </div>
     </div>
 
@@ -225,8 +270,18 @@
     /* Estilos para dispositivos móveis */
     @media screen and (max-width: 767px) {
 
+      .box-solucoes{
+        max-width: 70%;
+      }
+
       .imagemTrabaio2 {
         display: none;
+      }
+
+      .box-solucoes2{
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 90%;
       }
 
     }
@@ -234,7 +289,7 @@
 
 
   <!-- TIPO SERVICO -->
-  <section class="space-servico">
+  <section class="space-servico" id="tipos-servico">
     <div class="box-tiposServico">
       <div class="box-tipoServicoTitle">
         <h1 class="text-solucoes">Tipos de Serviço:</h1>
@@ -403,15 +458,16 @@
 
 
   <!-- Condicoes especiais -->
-  <section>
+  <section id="troque-contador">
     <div class="box-condicoes">
       <div class="condicoes-title">
         <h1>Calculadora</h1>
         <br>
         
-        <div class="box-calculadora">
+        <div class="box-calculadora" id="shadow">
           <div class="input-calc">
             <h5>Selecione seu regime tributário atual</h5>
+            <div class="radio-calc">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
               <label class="form-check-label" for="flexRadioDefault1">
@@ -443,11 +499,12 @@
               </label>
             </div>
 
-
+            </div>
           </div>
-
+<!--  -->
           <div class="input-calc">
             <h5>Qual sua área de atuação ?</h5>
+            <div class="radio-calc2">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
               <label class="form-check-label" for="flexRadioDefault5">
@@ -478,28 +535,28 @@
                 Industria
               </label>
             </div>
-
+          </div>
 
           </div>
 
           <h5>Quanto paga na sua contabilidade ?</h5>
           <div class="input-calc">
             
-            <input class="form-control form-control-lg" type="text" placeholder="R$: 00,00"
+            <input id="input-textCalc" class="form-control form-control-lg" type="text" placeholder="R$: 00,00"
               aria-label=".form-control-lg example" >
           </div>
 
           <h5>Quantos sócios/funciuonários têm na sua empresa ?</h5>
           <div class="input-calc">
             
-            <input class="form-control form-control-lg" type="text" placeholder="R$: 00,00"
+            <input id="input-textCalc" class="form-control form-control-lg" type="text" placeholder=""
               aria-label=".form-control-lg example">
           </div>
 
           <h5>Qual seu faturamento mensal ?</h5>
           <div class="input-calc">
             
-            <input class="form-control form-control-lg" type="text" placeholder="R$: 00,00"
+            <input id="input-textCalc" class="form-control form-control-lg" type="text" placeholder="R$: 00,00"
               aria-label=".form-control-lg example" >
           </div>
 
@@ -582,28 +639,47 @@
     </div>
   </section>
 
-  <script>
-    function showmodal(){
-      document.getElementById("hide-modal").style.display = "block";
-      document.getElementById("enviarModal").style.display = "block";
-      document.getElementById("hide-modal2").style.display = "none";
-      document.getElementById("solicitar").style.display = "none";
-    }
 
-    function closemodal(){
-      document.getElementById("hide-modal").style.display = "none";
-      document.getElementById("enviarModal").style.display = "none";
-      document.getElementById("hide-modal2").style.display = "block";
-      document.getElementById("solicitar").style.display = "block";
+  <style>
+    /* Estilos para dispositivos móveis */
+    @media screen and (max-width: 767px) {
+
+      .radio-calc{
+        max-width: 80%;
+        margin: 0 auto;
+        
+      }
+
+      .radio-calc2{
+        max-width: 80%;
+        margin: 0 auto;
+        
+        
+      }
+
+      #shadow h5{
+        max-width: 70%;
+        margin: 0 auto;
+        padding-bottom: 5%;
+        padding-top: 10%;
+      }
+      
+      #input-textCalc{
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+
     }
-  </script>
+    
+
+  </style>
+
+ 
   <!-- fim condicoes especiais -->
 
-  
-
-
   <!-- footer -->
-  <footer class="footer">
+  <footer class="footer" id="fale-conosco">
 
     <div class="container">
 
